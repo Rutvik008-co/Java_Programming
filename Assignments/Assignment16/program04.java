@@ -2,14 +2,14 @@
 
 class Logic
 {
-    int iCnt = 0, iRev = 0;
+    int iRev = 0;
 
     void reverseNumber(int iNo)
     {
         while (iNo > 0)
         {
             iRev = iNo % 10;
-            System.out.println(iRev);
+            System.out.print(iRev);
             iNo = iNo / 10;
         }
     }
@@ -20,6 +20,6 @@ class program04
     public static void main(String args[])
     {
         Logic obj = new Logic();
-        obj.reverseNumber(1234);
+        obj.reverseNumber(120286);
     }
 }
