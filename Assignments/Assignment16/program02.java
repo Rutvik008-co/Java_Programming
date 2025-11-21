@@ -2,8 +2,6 @@
 
 class Logic
 {
-    int iCnt = 0, iSum = 0;
-
     void checkEvenOdd(int iNo)
     {
         if(iNo % 2 == 0)
