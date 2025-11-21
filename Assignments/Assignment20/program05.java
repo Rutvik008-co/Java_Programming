@@ -4,7 +4,7 @@ class logic
 {
     void PrintSmallDigit(int iNo)
     {
-        int iCnt = 0, iDigit = 0, iSmall = 9;
+        int iDigit = 0, iSmall = 9;
         
         while (iNo > 0)
         {
@@ -24,7 +24,7 @@ class program05
 {
     public static void main(String[] args)
     {
-        int iValue = 12345;
+        int iValue = 120286;
 
         logic obj = new logic();
         obj.PrintSmallDigit(iValue);    
