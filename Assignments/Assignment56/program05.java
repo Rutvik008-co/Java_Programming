@@ -1,28 +1,35 @@
-// Write a program to find the sum of all even numbers up to N
+// Write JAVA program to accept derectory name and display all names of file from that derectroy
 
-class logic 
+import java.io.File;
+import java.util.Scanner;
+
+class program05
 {
-    void SumEvenNo(int iNo)
+    public static void main(String args[])
     {
-        int iCnt = 0, iSum = 0;
-        for(iCnt = 1; iCnt <= iNo; iCnt++)
+        Scanner sobj = new Scanner(System.in);
+
+        System.out.print("Enter directory name: ");
+        String dname = sobj.nextLine();
+
+        File fobj = new File(dname);
+
+        if(fobj.exists() && fobj.isDirectory())
         {
-            if(iCnt % 2 == 0)
+            String files[] = fobj.list();
+
+            System.out.println("Files in directory:");
+
+            for(int i = 0; i < files.length; i++)
             {
-                iSum = iSum + iCnt;
+                System.out.println(files[i]);
             }
         }
-        System.out.println(iSum);
-    }
-}
+        else
+        {
+            System.out.println("Directory does not exist");
+        }
 
-class program01
-{
-    public static void main(String[] args)
-    {
-        
-        logic obj = new logic();
-        obj.SumEvenNo(10);
-        
+        sobj.close();
     }
 }
